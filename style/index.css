@@ -23,6 +23,38 @@ header {
   padding: 0.5rem 1rem;
   z-index: 9999;
 }
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+swiper-container {
+  width: 100%;
+  padding-top: 5rem;
+  position: relative;
+  z-index: 2;
+  background-image: linear-gradient(15deg, #071924 0%, #2e4b47 100%);
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 60vw;
+  height: 100vh;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+}
+#bod
+{
+  visibility: hidden;
+}
 #nav {
   display: flex;
   list-style: none;
@@ -44,7 +76,7 @@ header {
   height: 2rem;
   border-radius: 4px;
   position: relative;
-  left: 40rem;
+  left: 37.8rem;
 }
 #btn-list svg {
   width: 2rem;
@@ -68,8 +100,10 @@ header {
 #loader {
   display: block;
   width: fit-content;
-  margin: auto;
-  margin-top: 12rem;
+  position: absolute;
+  z-index: 9999;
+  top: 35vh;
+  left: 42vw;
 }
 #list {
   background-color: black;
@@ -141,8 +175,7 @@ header {
   height: 100vh;
   border-radius: 5px;
 }
-#first_i
-{
+#first_i {
   width: 100vw;
   height: 40%;
 }
@@ -185,7 +218,8 @@ header {
 #t_desc {
   font-size: 2rem;
   color: white;
-  width: fit-content;
+  width: 80vw;
+  text-align: center;
   margin: auto;
   font-family: "Courier New", Courier, monospace;
 }
@@ -209,10 +243,10 @@ header {
   grid-row: span 2;
 } */
 .imgs {
-   width: 20rem;
-   height: auto;
-   grid-row: span auto;
-   grid-column: span auto;
+  width: 20rem;
+  height: auto;
+  grid-row: span auto;
+  grid-column: span auto;
 }
 #des * {
   position: relative;
@@ -308,6 +342,26 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  swiper-container {
+    width: 100%;
+    padding-top: 5rem;
+    position: relative;
+    z-index: 2;
+    height: 30rem;
+    background-image: linear-gradient(15deg, #071924 0%, #2e4b47 100%);
+  }
+
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 90vw;
+    height: 100vh;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+  }
   #c2 {
     top: 33rem;
   }
@@ -335,8 +389,8 @@ footer {
     top: 4rem;
   }
   #logo {
-    width: 4rem;
-    height: 3rem;
+    width: 3rem;
+    height: 2rem;
     border-radius: 5px;
     position: static;
   }
