@@ -16,7 +16,7 @@
   <body>
    
   <img src="images/Ellipsis-1.3s-203px.gif" id="loader" alt="" />
-  <div id="bod" style="display: none;">
+  <div id="bod" style="display: block;">
       <header>
         <img src="images/L B&W.png" alt="" id="logo" />
         <ul id="nav">
@@ -45,37 +45,25 @@
         <br />
         <a href="previous.html">Pervious work</a>
       </div>
-      <div id="cont_s">
-        <div class="igcont" id="first_i">
-          <!-- <img src="images/Slider/5.jpg" alt="" /> -->
-          <div id="first_i"></div>
-        </div>
-        <div class="igcont">
-          <img src="images/Slider/2.jpg" alt="" />
-        </div>
-        <div class="igcont">
-          <img src="images/Slider/3.jpg" alt="" />
-        </div>
-        <div class="igcont">
-          <img src="images/Slider/4.jpg" alt="" />
-        </div>
-        <div class="igcont">
-          <img src="images/Slider/5.jpg" alt="" />
-        </div>
-      </div>
-      <p
-        class="arow"
-        style="position: absolute; top: 16rem; left: 0rem; z-index: 2"
-      >
-        ⬅
-      </p>
-      
-      <p
-        class="arow"
-        style="position: absolute; top: 16rem; left: 74rem; z-index: 2"
-      >
-        ➡
-      </p>
+      <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+            slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+            coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+        <swiper-slide>
+          <img src="images/Slider/1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/Slider/2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/Slider/3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/Slider/4.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/Slider/5.jpg" />
+        </swiper-slide>
+      </swiper-container>
       <div id="des">
        
         <p id="t_desc">
@@ -187,29 +175,16 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p><pre>&copy; 2024 Mohamed & Hassan . All rights reserved.</pre></p>
+        <p><pre>&copy; 2024 Mohamed O. All rights reserved.</pre></p>
       </div>
     </footer>
   </div>
-    <script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script>
       let s = 0;
-       function slid() {
-       let slider_cont = document.getElementById("cont_s");
-       let windowWidth = window.innerWidth;
-       let slideWidth = windowWidth > 1400 ? 1400 : windowWidth;
-       let numSlides = Math.ceil(slider_cont.scrollWidth / slideWidth);
-       if (s >= numSlides) {
-           s = 0;
-       }
-       let leftOffset = s * slideWidth;
-       slider_cont.scrollTo({ top: 0, behavior: 'smooth', left: leftOffset });
-       s++;
-       setTimeout(slid, 5000);
-   }
-       slid();
       setTimeout(function () {
         document.getElementById("loader").style.display = "none";
-        document.getElementById("bod").style.display = "block";
+        document.getElementById("bod").style.visibility = "visible";
       }, 1500);
       setInterval(function () {
         if (window.scrollY > 0) {
@@ -229,6 +204,6 @@
           document.getElementById("svg").style.fill = "black";
         }
       }, 1);
-    </script>
+  </script>
   </body>
 </html>
