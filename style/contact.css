@@ -41,11 +41,11 @@
     color: white;
   }
   #logo {
-    width: 2rem;
+    width: 4rem;
     height: 2rem;
     border-radius: 4px;
     position: relative;
-    left: 43rem;
+    left: 41rem;
   }
   #btn-list svg {
     width: 2rem;
@@ -373,8 +373,8 @@
       top: 4rem;
     }
     #logo {
-      width: 4rem;
-      height: 3rem;
+      width: 2.5rem;
+      height: 1.5rem;
       border-radius: 5px;
       position: static;
     }
